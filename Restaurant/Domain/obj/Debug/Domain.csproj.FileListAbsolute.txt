@@ -1,0 +1,15 @@
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Domain\bin\Debug\Domainn.dll.config
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Domain\bin\Debug\Domainn.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Domain\bin\Debug\Domainn.pdb
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Domain\bin\Debug\Entitiess.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Domain\bin\Debug\EntityFramework.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Domain\bin\Debug\EntityFramework.SqlServer.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Domain\bin\Debug\Entitiess.pdb
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Domain\bin\Debug\Entitiess.dll.config
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Domain\bin\Debug\EntityFramework.xml
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Domain\bin\Debug\EntityFramework.SqlServer.xml
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Domain\obj\Debug\Domain.csproj.AssemblyReference.cache
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Domain\obj\Debug\Domain.csproj.CopyComplete
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Domain\obj\Debug\Domainn.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Domain\obj\Debug\Domainn.pdb

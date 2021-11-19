@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RestaurantModelStoreContainer" CdmEntityContainer="RestaurantEntities">
+    <EntitySetMapping Name="Estoque">
+      <EntityTypeMapping TypeName="RestaurantModel.Estoque">
+        <MappingFragment StoreEntitySet="Estoque">
+          <ScalarProperty Name="EstoqueId" ColumnName="EstoqueId" />
+          <ScalarProperty Name="Produto" ColumnName="Produto" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+          <ScalarProperty Name="DataUltimaAtualização" ColumnName="DataUltimaAtualização" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pedido">
+      <EntityTypeMapping TypeName="RestaurantModel.Pedido">
+        <MappingFragment StoreEntitySet="Pedido">
+          <ScalarProperty Name="PedidoId" ColumnName="PedidoId" />
+          <ScalarProperty Name="NomeClient" ColumnName="NomeClient" />
+          <ScalarProperty Name="MesaClient" ColumnName="MesaClient" />
+          <ScalarProperty Name="HorarioPedidoFeito" ColumnName="HorarioPedidoFeito" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PedidoFechado">
+      <EntityTypeMapping TypeName="RestaurantModel.PedidoFechado">
+        <MappingFragment StoreEntitySet="PedidoFechado">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EstoqueId" ColumnName="EstoqueId" />
+          <ScalarProperty Name="PedidoId" ColumnName="PedidoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

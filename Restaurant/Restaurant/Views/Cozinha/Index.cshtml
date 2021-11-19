@@ -1,0 +1,108 @@
+﻿@model IEnumerable<Application_.Model.PedidoModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="title" style="text-align:center">
+    <h1>Cozinha</h1>
+</section>
+<p>
+    @*<a class="btn btn-sm btn-primary">Criar novo</a>*@
+    @Html.ActionLink("Criar Novo", "Create", "Pedido", new { @class = "btn btn-sm btn-primary" })
+</p>
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeClient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MesaClient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrazoExecucao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusPedido)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @{ 
+            var NovaListaFechada = new List<Application_.Model.PedidoModel>();
+
+            var obterListaPedidosFechado = Model.ToList().Where(x => x.PedidoFechado != null);
+            foreach(var item in obterListaPedidosFechado)
+            {
+                var getList = item.PedidoFechado.Where(x => x.Estoque != null);
+                if (getList.Any())
+                {
+                    getList.Where(x => x.Estoque != null);
+                    if (getList.Any())
+                    {
+                        NovaListaFechada.Add(item);
+                    }
+                }   
+            }
+
+        }
+
+        @foreach (var item in NovaListaFechada)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeClient)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MesaClient)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrazoExecucao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StatusPedido)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", "Cozinha", new { id = item.PedidoId }, new { @class = "btn btn-sm btn-primary" })                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div id="posicao-modal"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script>
+
+    var posicaoModal = $('#posicao-modal');
+
+    function CallModalDelete(id) {
+
+        //return function (e) {
+        //    e.preventDefault();
+
+        //};
+
+        var urlBase = "/Pedido/";
+        var url = `${urlBase}Delete/${id}`;
+        $.get(url).done(function (data) {
+            posicaoModal.html(data);
+            posicaoModal.find('.modal').modal('show');
+        });
+
+        /*this.preventDefault();*/
+    }
+
+</script>
+
+
+
+
+

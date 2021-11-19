@@ -1,0 +1,12 @@
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Entities\bin\Debug\Entitiess.dll.config
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Entities\bin\Debug\Entitiess.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Entities\bin\Debug\Entitiess.pdb
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Entities\bin\Debug\EntityFramework.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Entities\bin\Debug\EntityFramework.SqlServer.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Entities\bin\Debug\System.ComponentModel.Annotations.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Entities\bin\Debug\EntityFramework.xml
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Entities\bin\Debug\EntityFramework.SqlServer.xml
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Entities\obj\Debug\Entities.csproj.AssemblyReference.cache
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Entities\obj\Debug\Entitiess.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Entities\obj\Debug\Entitiess.pdb

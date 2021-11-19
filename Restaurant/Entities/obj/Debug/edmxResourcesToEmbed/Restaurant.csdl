@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RestaurantModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Estoque">
+    <Key>
+      <PropertyRef Name="EstoqueId" />
+    </Key>
+    <Property Name="EstoqueId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Produto" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Quantidade" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DataCadastro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DataUltimaAtualização" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="PedidoFechado" Relationship="Self.FK_PedidoFechado_Estoque" FromRole="Estoque" ToRole="PedidoFechado" />
+    <Property Name="EBebida" Type="Boolean" />
+    <Property Name="EComida" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Pedido">
+    <Key>
+      <PropertyRef Name="PedidoId" />
+    </Key>
+    <Property Name="PedidoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomeClient" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MesaClient" Type="Int32" Nullable="false" />
+    <Property Name="HorarioPedidoFeito" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="PedidoFechado" Relationship="Self.FK_PedidoFechado_Pedido" FromRole="Pedido" ToRole="PedidoFechado" />
+    <Property Name="PrazoExecucao" Type="Int32" />
+    <Property Name="StatusPedido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="StatusCopa" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="StatusCozinha" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PedidoFechado">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EstoqueId" Type="Int32" Nullable="false" />
+    <Property Name="PedidoId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estoque" Relationship="Self.FK_PedidoFechado_Estoque" FromRole="PedidoFechado" ToRole="Estoque" />
+    <NavigationProperty Name="Pedido" Relationship="Self.FK_PedidoFechado_Pedido" FromRole="PedidoFechado" ToRole="Pedido" />
+    <Property Name="QuantidadeItem" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_PedidoFechado_Estoque">
+    <End Role="Estoque" Type="Self.Estoque" Multiplicity="1" />
+    <End Role="PedidoFechado" Type="Self.PedidoFechado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estoque">
+        <PropertyRef Name="EstoqueId" />
+      </Principal>
+      <Dependent Role="PedidoFechado">
+        <PropertyRef Name="EstoqueId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PedidoFechado_Pedido">
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="1" />
+    <End Role="PedidoFechado" Type="Self.PedidoFechado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pedido">
+        <PropertyRef Name="PedidoId" />
+      </Principal>
+      <Dependent Role="PedidoFechado">
+        <PropertyRef Name="PedidoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RestaurantEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Estoque" EntityType="Self.Estoque" />
+    <EntitySet Name="Pedido" EntityType="Self.Pedido" />
+    <EntitySet Name="PedidoFechado" EntityType="Self.PedidoFechado" />
+    <AssociationSet Name="FK_PedidoFechado_Estoque" Association="Self.FK_PedidoFechado_Estoque">
+      <End Role="Estoque" EntitySet="Estoque" />
+      <End Role="PedidoFechado" EntitySet="PedidoFechado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PedidoFechado_Pedido" Association="Self.FK_PedidoFechado_Pedido">
+      <End Role="Pedido" EntitySet="Pedido" />
+      <End Role="PedidoFechado" EntitySet="PedidoFechado" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

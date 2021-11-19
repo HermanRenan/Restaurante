@@ -1,0 +1,67 @@
+﻿@model Application_.Model.PedidoModel
+
+@{
+    Layout = null;
+}
+
+<div class="modal fade" id="modalDeletarPedido" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog app-modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Deletar</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                </button>
+            </div>
+            <div class="modal-body">
+
+                @using (Html.BeginForm("Delete", "Pedido", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+
+                        <p>Você tem certeza que deseja deletar este item?</p>
+                        <div class="itensPedido">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.NomeClient, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10" style="margin-top:1em">
+                                    @Html.DisplayFor(model => model.NomeClient, new { htmlAttributes = new { @class = "form-control" } })                                    
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.MesaClient, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10 display" style="margin-top:1em">
+                                    @Html.DisplayFor(model => model.MesaClient, new { htmlAttributes = new { @class = "form-control" } })                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group butoes">
+                            <div class="col-md-offset-2 col-md-10">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal" style="margin-right:10px">
+                                    <em class="fas fa-ban"></em>  Não
+                                </button>
+                                <input type="submit" id="SubmitButton" value="Sim" class="btn btn-primary" />
+
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>    
+
+    .butoes {
+        text-align:end;
+    }
+
+        .butoes > button {
+            width: 100px
+        }
+</style>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")

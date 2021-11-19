@@ -1,0 +1,16 @@
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\bin\Debug\Aplication_.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\bin\Debug\Aplication_.pdb
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\bin\Debug\AutoMapper.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\bin\Debug\Domainn.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\bin\Debug\Entitiess.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\bin\Debug\EntityFramework.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\bin\Debug\Domainn.pdb
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\bin\Debug\Domainn.dll.config
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\bin\Debug\Entitiess.pdb
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\bin\Debug\Entitiess.dll.config
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\bin\Debug\AutoMapper.xml
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\bin\Debug\EntityFramework.xml
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\obj\Debug\Aplication_.csproj.AssemblyReference.cache
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\obj\Debug\Aplication_.csproj.CoreCompileInputs.cache
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\obj\Debug\Aplication_.dll
+E:\repos\Projetos_entrevistas\Restaurante_doNetFramework\Restaurant\Aplication_\obj\Debug\Aplication_.pdb
